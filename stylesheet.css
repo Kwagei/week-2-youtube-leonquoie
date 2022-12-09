@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+*:focus{
+    outline: none;
+}
+
+body{
+    position: relative;
+    background: #f0f0f0;
+    font-family: 'roboto', sans-serif;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+}
+
+.toggle-btn{
+    width: 20px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #979797;
+}
+
+.toggle-btn span:nth-child(1){
+    top: 0;
+}
+
+.toggle-btn span:nth-child(3){
+    top: 100%;
+}
+
+.logo{
+    height: 30px;
+    margin: -10px 30px 0;
+}
+
+.search-box{
+    position: relative;
+    max-width: 500px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+    margin-left:193px;
+}
+
+.search-bar{
+    width: 85%;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.search-btn{
+    width: 15%;
+    height: 100%;
+    background: #f0f0f0;
+    border: 2px solid #dbdbdb;
+    padding: 5px 0;
+    border-left: none;
+}
+
+.search-btn img{
+    height: 100%;
+}
+
+.user-options{
+    height: 35px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.user-options .icon{
+    height: 80%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.user-dp{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-dp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* side-bar */
+
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-width: 250px;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: #fff;
+    padding-right: 10px;
+}
+
+.links{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #242424;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.links img{
+    height: 25px;
+    margin-right: 20px;
+}
+
+.links:hover,
+.links.active{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.seperator{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* filter */
+
+.filters{
+    position: fixed;
+    left: 250px;
+    top: 60px;
+    width: calc(100% - 250px);
+    height: 60px;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.filters::-webkit-scrollbar{
+    display: none;
+}
+
+.filter-options{
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #f0f0f0;
+    border: 1px solid #dbdbdb;
+    text-transform: capitalize;
+    margin-right: 10px;
+    color: #242424;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-options.active{
+    color: #fff;
+    background: #242424;
+}
+.filter-options.cat{
+    color: #fff;
+    background: #242424;
+}
+.filter-options.dog{
+    color: #fff;
+    background: #242424;
+}
+.filter-options.pig{
+    color: #fff;
+    background-color: #242424;
+}
+.filter-options.goat{
+    color:#fff;
+    background-color: #242424;
+}
+.filter-options.active.horse{
+    color:#fff;
+    background-color: #242424;
+}
+.filter-options.active.rat{
+    color:#fff;
+    background-color: #242424;
+}
+.filter-options.active.duck{
+    color:#fff;
+    background-color: #242424;
+}
+.filter-options.active.cat{
+    color:#fff;
+    background-color: #242424;
+}
+.filter-options.active.frog{
+    color:#fff;
+    background-color: #242424;
+}
+.video-container{
+    width: calc(100% - 250px);
+    margin-top: 120px;
+    margin-left: 250px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 20px 5px;
+    overflow-x: hidden;
+}
+
+.video{
+    min-height: 250px;
+    height: auto;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.content{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.title{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+
+.channel-name{
+    font-size: 14px;
+    margin: 2px 0;
+    color: #979797;
+}
+.video-container{
+    width: calc(100% - 250px);
+    margin-top: 120px;
+    margin-left: 250px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 20px 5px;
+    overflow-x: hidden;
+}
+
+.video{
+    min-height: 250px;
+    height: auto;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.content{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.title{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+
+.channel-name{
+    font-size: 14px;
+    margin: 2px 0;
+    color: #979797;
+}
+.video-container{
+    width: calc(100% - 250px);
+    margin-top: 120px;
+    margin-left: 250px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 20px 5px;
+    gap: 85px;
+}   
+
+
+
+
+
+
+
+ <div class="container">
+     <iframe src="https://youtu.be/RBumgq5yVrA"
+     width="360" height="215" frameborder="0" allowfullscreen></iframe>
+     <div class="info">
+         <h4 class="title">Passenger | Let Her Go (Official Video)
+             Passenger
+             6.91M subscribers
+             </h4>
+             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Let-her-go-by-passenger.jpg/220px-Let-her-go-by-passenger.jpg" class="channel-icon" alt="">
+         <p class="channel-name">Soul</p>
+     </div>
+    </div>
+           <br>
+    <div class="container">
+     <iframe src="https://youtu.be/xe_iCkFsQKE"
+     width="360" height="215" frameborder="0" allowfullscreen></iframe>
+     <div class="info">
+         <h4 class="title">The Weeknd - Earned It (from Fifty Shades Of Grey) (Official Lyric Video)
+             The Weeknd
+             30.2M subscribers
+             
+             </h4>
+             <img src="data:image/jpeg;base64,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" class="channel-icon" alt="">
+         <p class="channel-name">RnB</p>
+     </div>
+    </div>
+
+    <div class="container">
+     <iframe src="https://youtu.be/cE6wxDqdOV0"
+     width="360" height="215" frameborder="0" allowfullscreen></iframe>
+     <div class="info">
+         <h4 class="title">Lana Del Rey - Video Games <br>
+             308,321,919 views  Oct 16, 2011
+             Brand.</h4>
+         <p class="channel-name">RnB</p>
+     </div>
+    </div>
+
+    <div class="container">
+     <iframe src="https://youtu.be/cE6wxDqdOV0"
+     width="360" height="215" frameborder="0" allowfullscreen></iframe>
+     <div class="info">
+         <h4 class="title">Lana Del Rey - Video Games <br>
+             308,321,919 views  Oct 16, 2011
+             Brand.</h4>
+         <p class="channel-name">RnB</p>
+     </div>
+    </div>
+    <br>
+
+    <div class="container">
+     <iframe src="https://youtu.be/cE6wxDqdOV0"
+     width="360" height="215" frameborder="0" allowfullscreen></iframe>
+     <div class="info">
+         <h4 class="title">Lana Del Rey - Video Games <br>
+             308,321,919 views  Oct 16, 2011
+             Brand.</h4>
+         <p class="channel-name">RnB</p>
+     </div>
+    </div>
+
+ */
